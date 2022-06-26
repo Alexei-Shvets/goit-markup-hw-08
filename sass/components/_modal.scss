@@ -1,0 +1,307 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.2);
+    
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;  
+    }
+
+    .backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;    
+    }
+
+    .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.1);
+
+    @media screen and (min-width: 1px) and (max-width: 767px) {
+        padding: 93px 15px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 208px 159px;
+    }
+    }
+
+.modal {
+    position: absolute;
+    width: 528px;
+    padding: 40px;
+    background-color: $primary-white-color;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+    
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    @media screen and (min-width: 1px) and (max-width: 767px) {
+        max-width: 450px;
+        width: 100%;     
+    }
+    }
+
+    .close-window {
+    color: #000000;
+    }
+
+    .modal-button {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 0;  
+    background-color: transparent;
+    position: absolute;
+    right: 8px; 
+    top: 8px;         
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:active {
+        fill: $active-color;}
+}
+
+.modal-button:hover .close-window,
+.modal-button:focus .close-window {
+    fill: $accent-blue-color;
+
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
+/*формы модального окна*/
+    
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;        
+    color: var(--primary-text-color);
+    margin-bottom: 12px;
+} 
+
+.form { 
+    display: block; 
+    width: 448px;
+
+    @media screen and (min-width: 1px) and (max-width: 1199px) {
+        width: 100%;
+    }
+}
+
+    .field {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px; 
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 4px;   
+
+        transition-property: outline-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .field:not(:last-child) {
+    margin-bottom: 10px;
+    }
+
+    .form-top-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $description-text-color;
+    }
+
+    .textarea-field {
+    
+    color: $highlight-color;
+    min-height: 120px;
+    padding-top: 11px;
+    padding-right: 11px;
+    padding-left: 15px;
+    resize: none;    
+    } 
+
+    .textarea-field::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $description-text-color;    
+    }
+    
+    .field-box {
+    position: relative;
+    }
+
+    .field:focus {  
+    outline-color: $accent-blue-color;
+    } 
+    
+    .field:focus + .modal-svg {
+    fill: $accent-blue-color;
+    }
+
+    .modal-svg {
+    position: absolute;
+    top: 45%;    
+    left: 14px;
+    transform: translateY(-45%);
+    }
+
+    .form-top {
+    margin-bottom: 20px;
+    }
+
+    .second-form {
+    justify-content: center;
+    }
+
+    .second-form-agreement {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.71;
+    color: $description-text-color;
+    margin-left: 8px;    
+    margin-right: 4px;   
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+    }
+    
+    }
+
+    .agreement-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.71;
+    color: $accent-blue-color;
+    text-decoration: underline;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+    }
+    }
+
+    .button-second-form {
+    background-color: $accent-blue-color;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;       
+    border-radius: 2px;    
+    width: 16px;
+    height: 15px;
+    transition: background-color .3s;
+    }
+
+    .send-button { 
+    display: block;
+    min-width: 200px;      
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: #188CE8;
+    border: 1px solid transparent;
+    font-family: inherit;
+    cursor: pointer;    
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 30px;  
+    
+
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);        
+    }
+    
+
+    .send-button:hover,
+    .send-button:focus {
+    background-color: $accent-blue-color;
+    }
+
+    .send {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $primary-white-color;        
+    }
+    
+    .checkbox-field {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);    
+    margin: -1px;
+    }
+
+    .ok-svg {
+    width: 16px;
+    height: 16px;    
+    background-color: $primary-white-color; 
+    border: 2px solid $highlight-color;
+    border-radius: 2px;
+    fill: $primary-white-color;
+
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .checkbox-field:checked + .ok-svg {
+    border-radius: 2px;
+    background-color: $accent-blue-color;
+    border-color: transparent;
+    }
+
+    .checkbox-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;  
+    margin-left: 0;
+    margin-right: 0;   
+    
+    @media screen and (min-width: 1px) and (max-width: 767px) {
+        width: max-content;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: auto;
+    }
+    }
+
+    .labl {
+    display: block;
+    margin-bottom: 10px;
+    }
