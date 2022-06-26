@@ -1,0 +1,53 @@
+body {
+        font-family: Roboto, sans-serif;
+        color: $primary-text-color;
+        letter-spacing: 0.03em;                
+}
+
+.container {
+    max-width: 480px; 
+    width: 100%;   
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 1200px;
+    }        
+    }
+
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    }
+}
+
+/*уборка всех маркеров со всех списков*/
+ul {
+    list-style: none;
+}
+
+/* уборка всех подчеркиваний у ссылок */
+a {
+    text-decoration: none;
+}
+
+/*уборка всех лишних заголовков*/
+.hidden {
+    display: none;
+}
+
+/*стилизация всех подписей (абзацы) в серый цвет, согласно макету)*/
+.description {
+    color: $description-text-color;
+}
