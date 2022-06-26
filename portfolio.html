@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body class="page">
+    <!--Шапка сайта-->
+    <header class="page-header">
+        <div class="container header-wrapper">
+            <nav class="nav-list">
+                <!--Логотип сайта-->
+                <a href="./" class="logo page-header__logo">
+                    Web<span class="logo__icon">Studio</span>
+                </a>
+                <!--Навигация на другие страницы-->
+                <ul class="nav-area">
+                    <li class="nav-area__item">
+                        <a href="./" class="nav-area__link">Студия</a>
+                    </li>
+                    <li class="nav-area__item">
+                        <a href="./portfolio.html" class="nav-area__link nav-area__link--current">Портфолио</a>
+                    </li>
+                    <li class="nav-area__item">
+                        <a href="" class="nav-area__link">Контакты</a>
+                    </li>
+                </ul>
+                <!-------------Мобильное меню------------->
+                <button type="button" class="menu-button" data-menu-button>
+                    <svg width="40" height="40" class="icons-mobile" aria-controls="menu-container"
+                        aria-expanded="false" aria-label="Переключатель мобильного меню">
+                        <use class="icon-menu" href="images/symbol-of-button.svg#icon-mobile-menu"></use>
+                        <use class="icon-cross" href="images/symbol-of-button.svg#icon-close-mobile"></use>
+                    </svg>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <div class="mobile__content">
+                        <ul class="mobile-nav">
+                            <li class="mobile-nav__item">
+                                <a class="item__link" href="./">Студия</a>
+                            </li>
+                            <li class="mobile-nav__item">
+                                <a class="item__link item__link--current" href="./portfolio.html">Портфолио</a>
+                            </li>
+                            <li class="mobile-nav__item">
+                                <a class="item__link" href="">Контакты</a>
+                            </li>
+                        </ul>
+                        <ul class="mobile-communications">
+                            <li class="communications__item communications__phone">
+                                <a class="phone__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                            </li>
+                            <li class="communications__item communications__post"> 
+                                <a class="post__link" href="mailto:info@devstudio.com">info@devstudio.com</a>                            
+                            </li>                            
+                        </ul>
+                        <ul class="mobile-socials">
+                            <li class="socials__link">
+                                <a class="link__source" href="">Instagram</a>
+                            </li>
+                            <li class="socials__link">
+                                <a class="link__source" href="">Twitter</a>
+                            </li>
+                            <li class="socials__link">
+                                <a class="link__source" href="">Facebook</a>
+                            </li>
+                            <li class="socials__link">
+                                <a class="link__source" href="">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--Ссылка на почтовый ящик и контактный номер телефона-->
+            <ul class="contacts">
+                <li class="contacts__item">
+                    <a href="mailto:info@devstudio.com" class="contacts__link" aria-label="Почтовый ящик">
+                        <svg class="contacts__icon--letter" width="16" height="12">
+                            <use href="./images/symbol-defs.svg#icon-letter"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li class="contacts__item">
+                    <a href="tel:+380961111111" class="contacts__link" aria-label="Контактный телефон">
+                        <svg class="contacts__icon--tel" width="10" height="16">
+                            <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                        </svg>
+                        +38 096 111 11 11
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--Конец шапки сайта-->
+    </header>
+
+    <!--мэин - уникальный контент (меняющийся, который не повторяется на других страницах сайта)-->
+    <main>
+
+        <!--Список из кнопок (фильтр)(функционал будет подключен позже)-->
+        <section class="filter section">
+
+            <div class="container">
+
+                <h1 class="hidden">В дальнейшем этот заголовок будет скрыт</h1>
+                <ul class="switchers">
+                    <li class="switcher-items"><button type="button" class="button-secondary">Все</button></li>
+                    <li class="switcher-items"><button type="button" class="button-secondary">Веб-сайты</button></li>
+                    <li class="switcher-items"><button type="button" class="button-secondary apps">Приложения</button>
+                    </li>
+                    <li class="switcher-items"><button type="button" class="button-secondary design">Дизайн</button>
+                    </li>
+                    <li class="switcher-items"><button type="button"
+                            class="button-secondary marketing">Маркетинг</button></li>
+                </ul>
+
+                <!--Список с демонстрацией практической деятельности компании(картинки-ссылки)-->
+
+                <ul class="cards">
+
+                    <li class="our-experience">
+                        <a href="#" class="experience-item">
+                            <div class="overlay-box">
+                                <picture>
+                                    <source
+                                    srcset="
+                                        ./images/project/project-desktop1x.jpg 1x,
+                                        ./images/project/project-desktop2x.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project1-tab1.jpg 1x,
+                                        ./images/project/project1-tab2.jpg 2x
+                                    "
+                                    media="(min-width:768px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project1-mob1.jpg 1x,
+                                        ./images/project/project1-mob2.jpg 2x
+                                    "
+                                    media="(min-width:480px)"
+                                    />
+                                    <img
+                                    class="image-card"
+                                    src="./images/project/project1-mob1.jpg"
+                                    alt="Технокряк"
+                                    width="450"
+                                    />
+                                </picture>                                
+                                <div class="overlay-content">
+                                    <p class="over-text">Ресурс предлагает комплексные предложения с разным уровнем
+                                        функционала и сервисов. Все это позволит посетителю получить исчерпывающие
+                                        сведения о компании или частном лице.</p>
+                                </div>
+                            </div>
+                            <div class="our-pride">
+                                <h2 class="title-cards">Технокряк</h2>
+                                <p class="description cards-description">Веб-сайт</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="our-experience">
+                        <a href="#" class="experience-item">
+                            <div class="overlay-box">
+                                <picture>
+                                    <source
+                                    srcset="
+                                        ./images/project/project2-deskt1.jpg 1x,
+                                        ./images/project/project2-deskt2.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project2-tab1.jpg 1x,
+                                        ./images/project/project2-tab2.jpg 2x
+                                    "
+                                    media="(min-width:768px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project2-mob1.jpg 1x,
+                                        ./images/project/project2-mob2.jpg 2x
+                                    "
+                                    media="(min-width:480px)"
+                                    />
+                                    <img
+                                    class="image-card"
+                                    src="./images/project/project2-mob1.jpg"
+                                    alt="Постер New Orlean vs Golden Star"
+                                    width="450"
+                                    />
+                                </picture>          
+                                <div class="overlay-content">
+                                    <p class="over-text">Ресурс предлагает комплексные предложения с разным уровнем
+                                        функционала и сервисов. Все это позволит посетителю получить исчерпывающие
+                                        сведения о компании или частном лице.</p>
+                                </div>
+                            </div>
+                            <div class="our-pride">
+                                <h2 class="title-cards">Постер New Orlean vs. Golden Star</h2>
+                                <p class="description cards-description">Дизайн</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="our-experience">
+                        <a href="#" class="experience-item">
+                            <div class="overlay-box">
+                                <picture>
+                                    <source
+                                    srcset="
+                                        ./images/project/project3-deskt1.jpg 1x,
+                                        ./images/project/project3-deskt2.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project3-tab1.jpg 1x,
+                                        ./images/project/project3-tab2.jpg 2x
+                                    "
+                                    media="(min-width:768px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project3-mob1.jpg 1x,
+                                        ./images/project/project3-mob2.jpg 2x
+                                    "
+                                    media="(min-width:480px)"
+                                    />
+                                    <img
+                                    class="image-card"
+                                    src="./images/project/project3-mob1.jpg"
+                                    alt="Ресторан Seafood"
+                                    width="450"
+                                    />
+                                </picture>                                  
+                                <div class="overlay-content">
+                                    <p class="over-text">Ресурс предлагает комплексные предложения с разным уровнем
+                                        функционала и сервисов. Все это позволит посетителю получить исчерпывающие
+                                        сведения о компании или частном лице.</p>
+                                </div>
+                            </div>
+                            <div class="our-pride">
+                                <h2 class="title-cards">Ресторан Seafood</h2>
+                                <p class="description cards-description">Приложение</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="our-experience">
+                        <a href="#" class="experience-item">
+                            <div class="overlay-box">
+                                <picture>
+                                    <source
+                                    srcset="
+                                        ./images/project/project4-deskt1.jpg 1x,
+                                        ./images/project/project4-deskt2.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project4-tab1.jpg 1x,
+                                        ./images/project/project4-tab2.jpg 2x
+                                    "
+                                    media="(min-width:768px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project4-mob1.jpg 1x,
+                                        ./images/project/project4-mob2.jpg 2x
+                                    "
+                                    media="(min-width:480px)"
+                                    />
+                                    <img
+                                    class="image-card"
+                                    src="./images/project/project4-mob1.jpg"
+                                    alt="Проект Prime"
+                                    width="450"
+                                    />
+                                </picture>             
+                                <div class="overlay-content">
+                                    <p class="over-text">Ресурс предлагает комплексные предложения с разным уровнем
+                                        функционала и сервисов. Все это позволит посетителю получить исчерпывающие
+                                        сведения о компании или частном лице.</p>
+                                </div>
+                            </div>
+                            <div class="our-pride">
+                                <h2 class="title-cards">Проект Prime</h2>
+                                <p class="description cards-description">Маркетинг</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="our-experience">
+                        <a href="#" class="experience-item">
+                            <div class="overlay-box">
+                                <picture>
+                                    <source
+                                    srcset="
+                                        ./images/project/project5-deskt1.jpg 1x,
+                                        ./images/project/project5-deskt2.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project5-tab1.jpg 1x,
+                                        ./images/project/project5-tab2.jpg 2x
+                                    "
+                                    media="(min-width:768px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project5-mob1.jpg 1x,
+                                        ./images/project/project5-mob2.jpg 2x
+                                    "
+                                    media="(min-width:480px)"
+                                    />
+                                    <img
+                                    class="image-card"
+                                    src="./images/project/project5-mob1.jpg"
+                                    alt="Проект Boxes"
+                                    width="450"
+                                    />
+                                </picture>             
+                                <div class="overlay-content">
+                                    <p class="over-text">Ресурс предлагает комплексные предложения с разным уровнем
+                                        функционала и сервисов. Все это позволит посетителю получить исчерпывающие
+                                        сведения о компании или частном лице.</p>
+                                </div>
+                            </div>
+                            <div class="our-pride">
+                                <h2 class="title-cards">Проект Boxes</h2>
+                                <p class="description cards-description">Приложение</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="our-experience">
+                        <a href="#" class="experience-item">
+                            <div class="overlay-box">
+                                <picture>
+                                    <source
+                                    srcset="
+                                        ./images/project/project6-deskt1.jpg 1x,
+                                        ./images/project/project6-deskt2.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project6-tab1.jpg 1x,
+                                        ./images/project/project6-tab2.jpg 2x
+                                    "
+                                    media="(min-width:768px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project6-mob1.jpg 1x,
+                                        ./images/project/project6-mob2.jpg 2x
+                                    "
+                                    media="(min-width:480px)"
+                                    />
+                                    <img
+                                    class="image-card"
+                                    src="./images/project/project6-mob1.jpg"
+                                    alt="Inspiration has no Borders"
+                                    width="450"
+                                    />
+                                </picture>                                    
+                                <div class="overlay-content">
+                                    <p class="over-text">Ресурс предлагает комплексные предложения с разным уровнем
+                                        функционала и сервисов. Все это позволит посетителю получить исчерпывающие
+                                        сведения о компании или частном лице.</p>
+                                </div>
+                            </div>
+                            <div class="our-pride">
+                                <h2 class="title-cards">Inspiration has no Borders</h2>
+                                <p class="description cards-description">Веб-сайт</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="our-experience">
+                        <a href="#" class="experience-item">
+                            <div class="overlay-box">
+                                <picture>
+                                    <source
+                                    srcset="
+                                        ./images/project/project7-deskt1.jpg 1x,
+                                        ./images/project/project7-deskt2.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project7-tab1.jpg 1x,
+                                        ./images/project/project7-tab2.jpg 2x
+                                    "
+                                    media="(min-width:768px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project7-mob1.jpg 1x,
+                                        ./images/project/project7-mob2.jpg 2x
+                                    "
+                                    media="(min-width:480px)"
+                                    />
+                                    <img
+                                    class="image-card"
+                                    src="./images/project/project7-mob1.jpg"
+                                    alt="Издание Limited edition"
+                                    width="450"
+                                    />
+                                </picture>                        
+                                <div class="overlay-content">
+                                    <p class="over-text">Ресурс предлагает комплексные предложения с разным уровнем
+                                        функционала и сервисов. Все это позволит посетителю получить исчерпывающие
+                                        сведения о компании или частном лице.</p>
+                                </div>
+                            </div>
+                            <div class="our-pride">
+                                <h2 class="title-cards">Издание Limited edition</h2>
+                                <p class="description cards-description">Дизайн</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="our-experience">
+                        <a href="#" class="experience-item">
+                            <div class="overlay-box">
+                                <picture>
+                                    <source
+                                    srcset="
+                                        ./images/project/project8-deskt1.jpg 1x,
+                                        ./images/project/project8-deskt2.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project8-tab1.jpg 1x,
+                                        ./images/project/project8-tab2.jpg 2x
+                                    "
+                                    media="(min-width:768px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project8-mob1.jpg 1x,
+                                        ./images/project/project8-mob2.jpg 2x
+                                    "
+                                    media="(min-width:480px)"
+                                    />
+                                    <img
+                                    class="image-card"
+                                    src="./images/project/project8-mob1.jpg"
+                                    alt="Проект LAB"
+                                    width="450"
+                                    />
+                                </picture>
+                                <div class="overlay-content">
+                                    <p class="over-text">Ресурс предлагает комплексные предложения с разным уровнем
+                                        функционала и сервисов. Все это позволит посетителю получить исчерпывающие
+                                        сведения о компании или частном лице.</p>
+                                </div>
+                            </div>
+                            <div class="our-pride">
+                                <h2 class="title-cards">Проект LAB</h2>
+                                <p class="description cards-description">Маркетинг</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="our-experience">
+                        <a href="#" class="experience-item">
+                            <div class="overlay-box">
+                                <picture>
+                                    <source
+                                    srcset="
+                                        ./images/project/project9-deskt1.jpg 1x,
+                                        ./images/project/project9-deskt2.jpg 2x
+                                    "
+                                    media="(min-width:1200px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project9-tab1.jpg 1x,
+                                        ./images/project/project9-tab2.jpg 2x
+                                    "
+                                    media="(min-width:768px)"
+                                    />
+                                    <source
+                                    srcset="
+                                        ./images/project/project9-mob1.jpg 1x,
+                                        ./images/project/project9-mob2.jpg 2x
+                                    "
+                                    media="(min-width:480px)"
+                                    />
+                                    <img
+                                    class="image-card"
+                                    src="./images/project/project9-mob1.jpg"
+                                    alt="Growing Business"
+                                    width="450"
+                                    />
+                                </picture>
+                                <div class="overlay-content">
+                                    <p class="over-text">Ресурс предлагает комплексные предложения с разным уровнем
+                                        функционала и сервисов. Все это позволит посетителю получить исчерпывающие
+                                        сведения о компании или частном лице.</p>
+                                </div>
+                            </div>
+                            <div class="our-pride">
+                                <h2 class="title-cards">Growing Business</h2>
+                                <p class="description cards-description">Приложение</p>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!--окончание мэйна (уникального контента, который не повторяется на других страницах сайта)-->
+
+    <!--Подвал сайта (Логотип сайта с ссылкой на стартовую страницу + адрес с почтовым ящиком и контактным номером телефона)-->
+    <footer class="footer" role="contentinfo">
+        <div class="ending container">
+            <div class="footer-adress-menu">
+                <a href="./" class="logo page-header__logo">
+                    Web<span class="logo__icon">Studio</span>
+                </a>
+            <address>
+                <ul class="address-list">
+                    <li class="address-item address-from-footer">
+                        <a href="https://goo.gl/maps/rf6R2WwhsUxqRuNf8" class="main-adress">г. Киев, пр-т Леси Украинки, 26</a>
+                    </li>
+                    <li class="address-item address-from-footer">
+                        <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="address-item address-from-footer">
+                        <a href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                </ul>
+            </address>
+        </div>
+        <div class="footer-socials">
+            <h3 class="join">Присоединяйтесь</h3>
+            <ul class="footer-icons">
+                <li>
+                    <a class="last-socials" href="">
+                        <svg class="footer-social-network" width="20" height="20">
+                            <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="last-socials" href="">
+                        <svg class="footer-social-network" width="20" height="20">
+                            <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="last-socials" href="">
+                        <svg class="footer-social-network" width="20" height="20">
+                            <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="last-socials" href="">
+                        <svg class="footer-social-network" width="20" height="20">
+                            <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="e-mail-input">
+            <h3 class="subscribe">Подпишитесь на рассылку</h3>
+            <form name="signup_form" class="footer-form" autocomplete="off" novalidate>
+                <label class="footer-label">
+                    <span class="footer-hidden">E-mail</span>
+                    <input
+                        class="email-line"
+                        type="email"
+                        name="E-mail"
+                        placeholder="E-mail"
+                    >
+                </label>
+                <button class="button-form" type="submit">
+                    <span class="join-us">Подписаться</span>
+                    <svg class="icon-send" width="24" height="24">
+                        <use href="./images/symbol-of-button.svg#icon-send"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</footer>
+<div class="backdrop-menu mobile-is-hidden"> 
+    <div class="modal-menu">
+<script src="./js/menu.js"></script>
+</body>
+
+</html>
